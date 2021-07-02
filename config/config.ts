@@ -1,4 +1,4 @@
-import { ConnectOptions } from "https://deno.land/x/mongo@v0.22.0/mod.ts";
+import { ConnectOptions } from "../deps.ts";
 
 export const config: {
     mongo: ConnectOptions
@@ -8,8 +8,8 @@ export const config: {
         tls: false,
         servers: [
             {
-                host: 'localhost',
-                port: 27018
+                host: 'test-mongo',
+                port: 27017
             }
         ],
         credential: {

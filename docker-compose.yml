@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  discuss:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: discuss
+    restart: always
+    ports: 
+     - '8000:8000'
+    networks:
+     - ox-test
+
+  test-mongo:
+    container_name: test-mongo
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=eagle
+      - MONGO_INITDB_ROOT_PASSWORD=eagle-eye
+      - MONGO_INITDB_DATABASE=admin
+    ports:
+      - 27019:27017
+    networks:
+      - ox-test
+
+networks:
+  ox-test:
+    driver: bridge
+
+        

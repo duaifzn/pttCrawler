@@ -1,4 +1,4 @@
-import { MongoClient } from "https://deno.land/x/mongo@v0.22.0/mod.ts";
+import { MongoClient } from "../deps.ts";
 import PttPostSchema from "../models/pttPost.ts"
 import PttPostContentSchema from "../models/pttPostContent.ts"
 import PttPostCommentSchema from "../models/pttPostComment.ts"

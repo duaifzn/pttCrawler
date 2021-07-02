@@ -1,4 +1,4 @@
-import { Application } from "https://deno.land/x/oak@v7.6.3/mod.ts";
+import { Application } from "./deps.ts";
 import router from "./routes/route.ts"
 import PttService from "./schedules/pttSchedule.ts"
 

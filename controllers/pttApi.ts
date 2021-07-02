@@ -1,6 +1,6 @@
-import { cheerio } from "https://deno.land/x/cheerio@1.0.4/mod.ts";
+import { cheerio } from "../deps.ts";
 import PttService from "../services/pttService.ts"
-import { parse } from "https://deno.land/std@0.100.0/datetime/mod.ts";
+import { parse } from "../deps.ts";
 import { month } from "../helpers/date.ts";
 export default class PttApi extends PttService{
     readonly gossiping: string

@@ -1,5 +1,5 @@
 import PttApi from '../controllers/pttApi.ts'
-import {cron, daily, monthly, weekly} from 'https://deno.land/x/deno_cron@v1.0.0/cron.ts';
+import { cron } from '../deps.ts';
 
 
 export default class PttSchedule extends PttApi{
