@@ -8,3 +8,5 @@ export {cron, daily, monthly, weekly} from 'https://deno.land/x/deno_cron@v1.0.0
 export { cheerio } from "https://deno.land/x/cheerio@1.0.4/mod.ts";
 
 export { parse } from "https://deno.land/std@0.100.0/datetime/mod.ts";
+
+import "https://deno.land/x/dotenv@v2.0.0/load.ts";

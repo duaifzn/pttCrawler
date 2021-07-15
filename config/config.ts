@@ -1,22 +1,16 @@
-import { ConnectOptions } from "../deps.ts";
+import { dev } from './config.dev.ts'
+import { prod } from './config.prod.ts'
 
-export const config: {
-    mongo: ConnectOptions
-} = {
-    mongo: {
-        db: 'rt',
-        tls: false,
-        servers: [
-            {
-                host: 'test-mongo',
-                port: 27017
-            }
-        ],
-        credential: {
-            username: "eagle",
-            password: "eagle-eye",
-            db: 'admin',
-            mechanism: "SCRAM-SHA-1",
-        }
-    },
-}
+export const config = function(){
+    if(Deno.env.get('DENO_ENV') == 'prod' || Deno.env.get('DENO_ENV') == 'production'){
+        return prod
+    }
+    else if(Deno.env.get('DENO_ENV') == 'dev' || Deno.env.get('DENO_ENV') == 'development'){
+        return dev
+    }else{
+        return dev
+    }
+}()
+
+
+
